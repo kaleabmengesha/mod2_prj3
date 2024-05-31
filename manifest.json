@@ -1,10 +1,10 @@
 {
     "manifest_version": 3,
-    "version": "1.0",
-    "name": "Leads tracker",
+    "version": "7.1.7",
+    "name": "Smart Assistant",
     "action": {
         "default_popup": "index.html",
-        "default_icon": "icon.png"
+        "default_icon": "src/icon.png"
     },
     "permissions": [
         "tabs"

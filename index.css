@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-width: 400px;
 }
 
@@ -9,8 +9,18 @@ input {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #5f9341;
-    margin-bottom: 4px;
+    border: none;
+    margin-bottom: 7px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px#1f4ea5;
+    transition: 0.2s;
+}
+
+input:hover{
+    transform: scale(1.01);
+    border: 1px solid #1f4ea5;
+    box-shadow: 0px 0px 12px#1f4ea5;
+
 }
 
 button {
