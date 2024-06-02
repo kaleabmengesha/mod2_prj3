@@ -2,7 +2,13 @@ body {
     margin: 0;
     padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-width: 400px;
+    min-width: 490px;
+    cursor: default;
+
+}
+
+a {
+    cursor: default;
 }
 
 input {
@@ -14,26 +20,95 @@ input {
     border-radius: 20px;
     box-shadow: 0px 0px 7px#1f4ea5;
     transition: 0.2s;
+    background-color: #d3d9ff;
 }
 
 input:hover{
     transform: scale(1.01);
     box-shadow: 0px 0px 12px#1f4ea5;
+    background-color: white;
 
 }
 
 button {
-    background: #5f9341;
+    background: #3d8514;
     color: white;
     padding: 10px 20px;
     border: 1px solid #5f9341;
     font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px rgb(71, 71, 71);
+    margin: 4px;
+    transition: 0.2s;
+
+
 }
 
-#delete-btn {
-    background: white;
-    color: #5f9341;
+button:hover{
+    transform: scale(1.02);
+    color: #3d8514;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 10px rgb(71, 71, 71);
+
 }
+
+button:active{
+    background: #3d8514;
+    color: white;
+    transform: scale(1);
+
+}
+
+#tab {
+    background: #141f85;
+    color: white;
+    border: 1px solid #414993;
+    transition: 0.2s;
+
+
+}
+
+#tab:hover{
+    transform: scale(1.02);
+    color: #141f85;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 10px rgb(71, 71, 71);
+
+}
+
+#tab:active{
+    background: #141f85;
+    color: white;
+    transform: scale(1);
+
+}
+
+
+#clr {
+    background: #d80000ce;
+    color: white;
+    border: 1px solid #d80000ce;
+    transition: 0.2s;
+
+
+}
+
+#clr:hover{
+    transform: scale(1.02);
+    color: #d80000ce;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 10px rgb(71, 71, 71);
+
+}
+
+#clr:active{
+    background: #d80000ce;
+    color: white;
+    transform: scale(1);
+
+}
+
 
 ul {
     margin-top: 20px;
@@ -45,8 +120,5 @@ li {
     margin-top: 5px;
 }
 
-a {
-    color: #5f9341;
-}
 
 
