@@ -86,9 +86,9 @@ button:active{
 
 
 #clr {
-    background: #d80000ce;
+    background: red;
     color: white;
-    border: 1px solid #d80000ce;
+    border: 1px solid red;
     transition: 0.2s;
 
 
@@ -96,19 +96,18 @@ button:active{
 
 #clr:hover{
     transform: scale(1.02);
-    color: #d80000ce;
+    color: red;
     background-color: aliceblue;
     box-shadow: 0px 0px 10px rgb(71, 71, 71);
 
 }
 
 #clr:active{
-    background: #d80000ce;
+    background: red;
     color: white;
     transform: scale(1);
 
 }
-
 
 ul {
     margin-top: 20px;
@@ -118,6 +117,8 @@ ul {
 
 li {
     margin-top: 5px;
+
+
 }
 
 

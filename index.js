@@ -1,65 +1,65 @@
 
 
+let data = []
 
-let localdata = []
+var savelists = ""
 
+const local = JSON.parse( localStorage.getItem("data") )
 
-const inputEl = document.getElementById("input")
-const inputBtn = document.getElementById("save")
-const deleteBtn = document.getElementById("clr")
-const leadsFromLocalStorage = JSON.parse( localStorage.getItem("localdata") )
-
-
-if (leadsFromLocalStorage) {
-    localdata = leadsFromLocalStorage
-    render(localdata)
+if (local) {
+    data = local
+    render(data)
 }
 
 
 
-
-function main() {
+function render(links) {
     
-    let tabBtn = document.getElementById("tab")
-    tabBtn.addEventListener("click", function(){    
-        chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-            localdata.push(tabs[0].url)
-            localStorage.setItem("localdata", JSON.stringify(localdata) )
-            render(localdata)
-        })
-    })
-}
+    savelists = ""
 
-main()
+    const list = document.getElementById("list")
 
-
-
-function render(leads) {
-
-const ulEl = document.getElementById("list")
-
-    let listItems = ""
-    for (let i = 0; i < leads.length; i++) {
-        listItems += `
+    for (let i = 0; i < links.length; i++) {
+        if (links[i] != "") {
+            savelists += `
             <li>
-                <a target='_blank' href='${leads[i]}'>
-                    ${leads[i]}
+                <a target='_blank' href='${links[i]}'>
+                    ${links[i]}
                 </a>
             </li>
+            
         `
+        }
     }
-    ulEl.innerHTML = listItems
+    list.innerHTML = savelists
 }
 
-deleteBtn.addEventListener("dblclick", function() {
+
+
+
+document.getElementById("clr").addEventListener("dblclick", function() {
+
     localStorage.clear()
-    localdata = []
-    render(localdata)
+    data = []
+    render(data)
 })
 
-inputBtn.addEventListener("click", function() {
-    localdata.push(inputEl.value)
-    inputEl.value = ""
-    localStorage.setItem("localdata", JSON.stringify(localdata) )
-    render(localdata)
+
+
+document.getElementById("tab").addEventListener("click", function () {    
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        data.push(tabs[0].url)
+        localStorage.setItem("data", JSON.stringify(data) )
+        render(data)
+    })
+})
+
+
+document.getElementById("save").addEventListener("click", function() {
+    const input = document.getElementById("input")
+
+    data.push(input.value)
+    input.value = ""
+    localStorage.setItem("data", JSON.stringify(data) )
+    render(data)
 })

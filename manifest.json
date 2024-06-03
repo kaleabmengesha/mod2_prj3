@@ -1,12 +1,11 @@
 {
     "manifest_version": 3,
     "version": "7.1.7",
-    "name": "Smart Assistant",
+    "name": "Smart Assistant for Chrome",
     "action": {
         "default_popup": "index.html",
         "default_icon": "src/icon.png"
     },
-    "permissions": [
-        "tabs"
-    ]
+    "permissions": ["tabs"]
+    
 } 
